@@ -1,0 +1,202 @@
+{
+  "categories": [
+    {
+      "id": "siyosat",
+      "name": "Siyosat",
+      "icon": "fa-landmark",
+      "color": "#1e4d8c",
+      "sort_order": 0
+    },
+    {
+      "id": "iqtisod",
+      "name": "Iqtisod",
+      "icon": "fa-chart-line",
+      "color": "#059669",
+      "sort_order": 1
+    },
+    {
+      "id": "sport",
+      "name": "Sport",
+      "icon": "fa-futbol",
+      "color": "#dc2626",
+      "sort_order": 2
+    },
+    {
+      "id": "texnologiya",
+      "name": "Texnologiya",
+      "icon": "fa-microchip",
+      "color": "#7c3aed",
+      "sort_order": 3
+    },
+    {
+      "id": "madaniyat",
+      "name": "Madaniyat",
+      "icon": "fa-masks-theater",
+      "color": "#d97706",
+      "sort_order": 4
+    },
+    {
+      "id": "dunyo",
+      "name": "Dunyo",
+      "icon": "fa-globe",
+      "color": "#0284c7",
+      "sort_order": 5
+    },
+    {
+      "id": "jamiyat",
+      "name": "Jamiyat",
+      "icon": "fa-users",
+      "color": "#be185d",
+      "sort_order": 6
+    },
+    {
+      "id": "digest",
+      "name": "Kun xulosasi",
+      "icon": "fa-calendar-day",
+      "color": "#0f766e",
+      "sort_order": 7
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "category": "siyosat",
+      "title": "O'zbekiston va Yevropa Ittifoqi o'rtasida yangi savdo kelishuvi imzolandi",
+      "excerpt": "Toshkentda o'tkazilgan muzokaralar natijasida ikki tomonlama savdo hajmini oshirish bo'yicha muhim kelishuvga erishildi.",
+      "content": "O'zbekiston Respublikasi va Yevropa Ittifoqi o'rtasida yangi savdo va investitsiya kelishuvi imzolandi. Kelishuv doirasida O'zbekiston mahsulotlarining Yevropa bozorlariga kirishi osonlashadi, soliq imtiyozlari beriladi va investitsiya muhiti yaxshilanadi.\n\nEkspertlarning fikricha, bu kelishuv mamlakat iqtisodiyotiga yiliga qo'shimcha 1,5 milliard dollar daromad keltirishi mumkin. Ayniqsa, to'qimachilik, qishloq xo'jaligi va IT sohalari foyda ko'radi.\n\nPrezident matbuot xizmati xabariga ko'ra, kelishuv 2027-yildan boshlab to'liq kuchga kiradi.",
+      "title_ru": "Между Узбекистаном и Европейским союзом подписано новое торговое соглашение",
+      "excerpt_ru": "По итогам переговоров в Ташкенте достигнута важная договорённость об увеличении объёма двусторонней торговли.",
+      "content_ru": "Между Республикой Узбекистан и Европейским союзом подписано новое соглашение о торговле и инвестициях. В рамках соглашения облегчается доступ узбекских товаров на европейские рынки, предоставляются налоговые льготы и улучшается инвестиционный климат.\n\nПо мнению экспертов, это соглашение может приносить экономике страны дополнительно 1,5 миллиарда долларов в год. Особенно выиграют текстильная промышленность, сельское хозяйство и IT-сфера.\n\nСогласно сообщению пресс-службы Президента, соглашение полностью вступит в силу с 2027 года.",
+      "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=80",
+      "author": "Nodira Karimova",
+      "date": "2026-09-20T08:30:00",
+      "views": 12450
+    },
+    {
+      "id": 2,
+      "category": "jamiyat",
+      "title": "Toshkentda yangi metro liniyasi qurilishi boshlandi",
+      "excerpt": "Shaharning shimoliy qismida 12 km uzunlikdagi yangi metro liniyasi qurilishi rasman boshlandi. Loyiha 2029-yilda yakunlanishi kutilmoqda.",
+      "content": "Toshkent shahar hokimligi yangi metro liniyasi qurilishi boshlanganini e'lon qildi. Liniya Yunusobod va Sergeli tumanlarini bog'laydi va 8 ta yangi bekatni o'z ichiga oladi.\n\nQurilish ishlari zamonaviy texnologiyalar asosida olib boriladi. Loyihaning umumiy qiymati 1,2 milliard dollar deb baholanmoqda. Xalqaro moliyaviy institutlar loyihani qo'llab-quvvatlamoqda.\n\nShaharning transport infratuzilmasi sezilarli darajada yaxshilanadi va yo'lovchilar soni yiliga 40 millionga oshishi kutilmoqda.",
+      "title_ru": "В Ташкенте начато строительство новой линии метро",
+      "excerpt_ru": "В северной части города официально стартовало строительство новой линии метро протяжённостью 12 км. Завершение проекта ожидается в 2029 году.",
+      "content_ru": "Хокимият города Ташкента объявил о начале строительства новой линии метро. Линия соединит Юнусабадский и Сергелийский районы и будет включать 8 новых станций.\n\nСтроительные работы ведутся с применением современных технологий. Общая стоимость проекта оценивается в 1,2 миллиарда долларов. Проект поддерживают международные финансовые институты.\n\nТранспортная инфраструктура города заметно улучшится, а пассажиропоток, как ожидается, вырастет до 40 миллионов человек в год.",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "author": "Aziz Rahimov",
+      "date": "2026-09-20T07:15:00",
+      "views": 8920
+    },
+    {
+      "id": 3,
+      "category": "sport",
+      "title": "O'zbekiston futbol terma jamoasi Jahon chempionati saralashida g'alaba qozondi",
+      "excerpt": "Milliy terma jamoa mehmonda 2:0 hisobida g'alaba qozonib, guruhda yetakchilikni saqlab qoldi.",
+      "content": "O'zbekiston milliy futbol terma jamoasi Jahon chempionati saralash o'yinida raqibini 2:0 hisobida mag'lub etdi. Gollar 34 va 67-daqiqalarda kiritildi.\n\nMurabbiy Srečko Katanec o'yindan so'ng jamoaning intizomi va jangovar ruhini yuqori baholadi. Keyingi o'yin uy sharoitida o'tkaziladi va muhim ahamiyatga ega.\n\nMuxlislar Toshkentda katta bayram kayfiyatida. Stadiumda 30 mingdan ortiq tomoshabin ishtirok etdi.",
+      "title_ru": "Сборная Узбекистана по футболу победила в отборочном матче чемпионата мира",
+      "excerpt_ru": "Национальная сборная выиграла на выезде со счётом 2:0 и сохранила лидерство в группе.",
+      "content_ru": "Национальная сборная Узбекистана по футболу обыграла соперника в отборочном матче чемпионата мира со счётом 2:0. Голы были забиты на 34-й и 67-й минутах.\n\nПосле матча тренер Сречко Катанец высоко оценил дисциплину и боевой дух команды. Следующая игра пройдёт на домашнем поле и имеет важное значение.\n\nБолельщики в Ташкенте находятся в праздничном настроении. На стадионе присутствовали более 30 тысяч зрителей.",
+      "image": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80",
+      "author": "Jasur Toshmatov",
+      "date": "2026-09-19T22:00:00",
+      "views": 25600
+    },
+    {
+      "id": 4,
+      "category": "texnologiya",
+      "title": "AI texnologiyalari O'zbekiston ta'lim tizimiga joriy etilmoqda",
+      "excerpt": "Maktablarda sun'iy intellekt asosidagi o'quv platformalari sinovdan o'tkazilmoqda. Loyiha 500 ta maktabni qamrab oladi.",
+      "content": "O'zbekiston Ta'lim vazirligi sun'iy intellekt texnologiyalarini maktab ta'limiga joriy etish bo'yicha yangi dastur e'lon qildi. Dastur doirasida 500 ta maktabda AI-asosidagi shaxsiylashtirilgan o'quv platformalari ishga tushiriladi.\n\nPlatforma har bir o'quvchining o'zlashtirish darajasini tahlil qilib, individual dars rejasini tuzadi. O'qituvchilar uchun esa avtomatik baholash va hisobot tizimi yaratilgan.\n\nMutaxassislar bu innovatsiya ta'lim sifatini sezilarli oshirishi mumkinligini ta'kidlamoqda. Loyiha 2027-yilgacha to'liq amalga oshirilishi rejalashtirilgan.",
+      "title_ru": "Технологии ИИ внедряются в систему образования Узбекистана",
+      "excerpt_ru": "В школах тестируются учебные платформы на основе искусственного интеллекта. Проект охватит 500 школ.",
+      "content_ru": "Министерство образования Узбекистана объявило о новой программе внедрения технологий искусственного интеллекта в школьное образование. В рамках программы в 500 школах будут запущены персонализированные учебные платформы на основе ИИ.\n\nПлатформа анализирует уровень усвоения материала каждым учеником и составляет индивидуальный план занятий. Для учителей создана система автоматического оценивания и отчётности.\n\nСпециалисты отмечают, что эта инновация может заметно повысить качество образования. Полностью реализовать проект планируется к 2027 году.",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+      "author": "Malika Yusupova",
+      "date": "2026-09-19T15:40:00",
+      "views": 6780
+    },
+    {
+      "id": 5,
+      "category": "iqtisod",
+      "title": "Paxta narxi xalqaro bozorda rekord darajaga ko'tarildi",
+      "excerpt": "O'zbekiston paxtasi uchun narxlar so'nggi 10 yildagi eng yuqori ko'rsatkichga yetdi. Eksport daromadi oshishi kutilmoqda.",
+      "content": "Xalqaro paxta birjalarida O'zbekiston paxtasi narxi rekord darajaga ko'tarildi. Bir tonna paxta uchun narx 2,450 dollarga yetdi.\n\nBu o'sish global talabning ortishi va ba'zi ishlab chiqaruvchi mamlakatlardagi hosil kamayishi bilan bog'liq. O'zbekiston Qishloq xo'jaligi vazirligi eksport hajmini oshirish choralarini ko'rmoqda.\n\nFermerlar uchun bu yaxshi yangilik — daromadlar oshishi va yangi investitsiyalar jalb etilishi kutilmoqda.",
+      "title_ru": "Цена на хлопок на мировом рынке достигла рекордного уровня",
+      "excerpt_ru": "Цены на узбекский хлопок достигли самого высокого показателя за последние 10 лет. Ожидается рост экспортной выручки.",
+      "content_ru": "На международных хлопковых биржах цена узбекского хлопка поднялась до рекордного уровня. Стоимость одной тонны хлопка достигла 2450 долларов.\n\nЭтот рост связан с увеличением мирового спроса и снижением урожая в некоторых странах-производителях. Министерство сельского хозяйства Узбекистана принимает меры для увеличения объёмов экспорта.\n\nДля фермеров это хорошая новость — ожидается рост доходов и привлечение новых инвестиций.",
+      "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3855?w=800&q=80",
+      "author": "Sardor Alimov",
+      "date": "2026-09-19T11:20:00",
+      "views": 5430
+    },
+    {
+      "id": 6,
+      "category": "madaniyat",
+      "title": "Samarqandda xalqaro madaniyat festivali ochildi",
+      "excerpt": "40 dan ortiq mamlakat ishtirokida o'tayotgan festival shaharga minglab sayyohlarni jalb etmoqda.",
+      "content": "Samarqandda 'Buyuk Ipak Yo'li' xalqaro madaniyat festivali tantanali ochildi. Festival doirasida musiqa, raqs, hunarmandchilik va gastronomiya ko'rgazmalari o'tkazilmoqda.\n\n40 dan ortiq mamlakatdan san'atkorlar va hunarmandlar ishtirok etmoqda. Festival 10 kun davom etadi va shaharga 50 mingdan ortiq sayyoh tashrif buyurishi kutilmoqda.\n\nMadaniyat vazirligi festivalni O'zbekistonning yumshoq kuch siyosatining muhim qismi sifatida baholamoqda.",
+      "title_ru": "В Самарканде открылся международный фестиваль культуры",
+      "excerpt_ru": "Фестиваль, проходящий с участием более 40 стран, привлекает в город тысячи туристов.",
+      "content_ru": "В Самарканде торжественно открылся международный фестиваль культуры «Великий Шёлковый путь». В рамках фестиваля проходят выставки музыки, танцев, ремёсел и гастрономии.\n\nВ нём участвуют артисты и мастера из более чем 40 стран. Фестиваль продлится 10 дней, и ожидается, что город посетят более 50 тысяч туристов.\n\nМинистерство культуры оценивает фестиваль как важную часть политики «мягкой силы» Узбекистана.",
+      "image": "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800&q=80",
+      "author": "Dilnoza Xolmatova",
+      "date": "2026-09-18T18:00:00",
+      "views": 4120
+    },
+    {
+      "id": 7,
+      "category": "dunyo",
+      "title": "Dunyo bozorlarida neft narxi keskin o'sdi",
+      "excerpt": "Geopolitik keskinliklar tufayli Brent markali neft narxi 95 dollarga yetdi. O'zbekiston energiya bozoriga ta'siri tahlil qilinmoqda.",
+      "content": "Xalqaro neft bozorlarida Brent markali neft narxi bir barrel uchun 95 dollarga ko'tarildi. Bu so'nggi ikki yildagi eng yuqori ko'rsatkich.\n\nNarxlarning o'sishi Yaqin Sharqdagi keskinliklar va ba'zi ishlab chiqaruvchi mamlakatlardagi ta'minot uzilishlari bilan bog'liq. Tahlilchilar narxlar yaqin oylarda yuqori bo'lib qolishini bashorat qilmoqda.\n\nO'zbekiston Energetika vazirligi mamlakat ichki bozoriga ta'sirini minimallashtirish choralarini ko'rayotganini ma'lum qildi.",
+      "title_ru": "Цены на нефть на мировых рынках резко выросли",
+      "excerpt_ru": "Из-за геополитической напряжённости цена нефти марки Brent достигла 95 долларов. Анализируется влияние на энергетический рынок Узбекистана.",
+      "content_ru": "На международных нефтяных рынках цена нефти марки Brent поднялась до 95 долларов за баррель. Это самый высокий показатель за последние два года.\n\nРост цен связан с напряжённостью на Ближнем Востоке и перебоями в поставках в некоторых странах-производителях. Аналитики прогнозируют, что в ближайшие месяцы цены останутся высокими.\n\nМинистерство энергетики Узбекистана сообщило, что принимает меры для минимизации влияния на внутренний рынок страны.",
+      "image": "https://images.unsplash.com/photo-1513828583688-c526614b1b60?w=800&q=80",
+      "author": "Bobur Ismoilov",
+      "date": "2026-09-18T14:30:00",
+      "views": 9870
+    },
+    {
+      "id": 8,
+      "category": "iqtisod",
+      "title": "Yangi soliq islohotlari tadbirkorlar uchun imtiyozlar kengaytirildi",
+      "excerpt": "Kichik biznes uchun soliq stavkalari pasaytirildi va hisobot topshirish tartibi soddalashtirildi.",
+      "content": "O'zbekiston Moliya vazirligi yangi soliq islohotlari to'plamini e'lon qildi. Kichik va o'rta biznes uchun soliq stavkalari 2 foizga pasaytirildi.\n\nShuningdek, onlayn hisobot topshirish tizimi takomillashtirildi va ba'zi majburiy to'lovlar bekor qilindi. Tadbirkorlar bu o'zgarishlarni ijobiy baholamoqda.\n\nIslohotlar 2027-yil 1-yanvardan kuchga kiradi. Hukumat bu choralar orqali rasmiy sektordagi tadbirkorlik faolligini oshirishni maqsad qilgan.",
+      "title_ru": "Новые налоговые реформы: расширены льготы для предпринимателей",
+      "excerpt_ru": "Для малого бизнеса снижены налоговые ставки, а порядок сдачи отчётности упрощён.",
+      "content_ru": "Министерство финансов Узбекистана объявило о новом пакете налоговых реформ. Налоговые ставки для малого и среднего бизнеса снижены на 2 процента.\n\nКроме того, усовершенствована система онлайн-отчётности, а некоторые обязательные платежи отменены. Предприниматели положительно оценивают эти изменения.\n\nРеформы вступят в силу с 1 января 2027 года. С помощью этих мер правительство стремится повысить предпринимательскую активность в официальном секторе.",
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+      "author": "Nilufar Saidova",
+      "date": "2026-09-18T09:00:00",
+      "views": 7650
+    },
+    {
+      "id": 9,
+      "category": "texnologiya",
+      "title": "O'zbekistonlik olimlar xalqaro AI tanlovida 1-o'rinni egalladi",
+      "excerpt": "Toshkent axborot texnologiyalari universiteti talabalari xalqaro sun'iy intellekt tanlovida g'olib chiqdi.",
+      "content": "Toshkent axborot texnologiyalari universiteti talabalari jamoasi xalqaro sun'iy intellekt tanlovida birinchi o'rinni egalladi. Tanlovda 50 dan ortiq mamlakatdan 200 ga yaqin jamoa ishtirok etgan.\n\nG'olib jamoa tibbiy diagnostika uchun AI modelini yaratgan. Model kasalliklarni 96% aniqlik bilan aniqlay oladi. Loyiha allaqachon xalqaro investorlar e'tiborini qozongan.\n\nUniversitet rektori bu yutuqni talabalar va o'qituvchilarning mehnati natijasi deb baholadi.",
+      "title_ru": "Узбекистанские учёные заняли 1-е место на международном конкурсе по ИИ",
+      "excerpt_ru": "Студенты Ташкентского университета информационных технологий победили на международном конкурсе по искусственному интеллекту.",
+      "content_ru": "Команда студентов Ташкентского университета информационных технологий заняла первое место на международном конкурсе по искусственному интеллекту. В конкурсе участвовали около 200 команд из более чем 50 стран.\n\nКоманда-победитель создала модель ИИ для медицинской диагностики. Модель способна выявлять заболевания с точностью 96%. Проект уже привлёк внимание международных инвесторов.\n\nРектор университета оценил это достижение как результат труда студентов и преподавателей.",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80",
+      "author": "Kamola Rakhimova",
+      "date": "2026-09-17T16:45:00",
+      "views": 11200
+    },
+    {
+      "id": 10,
+      "category": "madaniyat",
+      "title": "Buxoroda yangi turizm zonasi ochildi",
+      "excerpt": "Tarixiy shaharda zamonaviy mehmonxonalar va madaniy markazlarni o'z ichiga olgan yangi turizm zonasi ishga tushdi.",
+      "content": "Buxoro shahrida yangi turizm zonasi rasman ochildi. Zona 15 ta mehmonxona, restoranlar, hunarmandchilik markazlari va madaniy ko'rgazmalarni o'z ichiga oladi.\n\nLoyiha xalqaro standartlarga mos qurilgan va yiliga 200 ming sayyohni qabul qilish imkoniyatiga ega. Turizm vazirligi bu zonani 'O'zbekistonning yangi yuzlari' deb atadi.\n\nMahalliy aholi uchun 500 dan ortiq ish o'rni yaratildi. Zona ochilishi bilan shaharga sayyohlar oqimi sezilarli oshishi kutilmoqda.",
+      "title_ru": "В Бухаре открылась новая туристическая зона",
+      "excerpt_ru": "В историческом городе начала работу новая туристическая зона с современными гостиницами и культурными центрами.",
+      "content_ru": "В городе Бухаре официально открылась новая туристическая зона. В неё вошли 15 гостиниц, рестораны, центры ремёсел и культурные выставки.\n\nПроект построен в соответствии с международными стандартами и способен принимать 200 тысяч туристов в год. Министерство туризма назвало эту зону «новым лицом Узбекистана».\n\nДля местных жителей создано более 500 рабочих мест. С открытием зоны ожидается заметный рост потока туристов в город.",
+      "image": "https://images.unsplash.com/photo-1590075865003-e48277faa066?w=800&q=80",
+      "author": "Farrux Nazarov",
+      "date": "2026-09-17T12:00:00",
+      "views": 3890
+    }
+  ]
+}

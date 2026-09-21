@@ -1,0 +1,16 @@
+{
+  "name": "uz-news",
+  "version": "2.0.0",
+  "description": "UZ News — yangiliklar sayti (Supabase (Postgres) baza + kod bilan kiriladigan admin panel)",
+  "private": true,
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node --no-warnings server.js",
+    "set-code": "node --no-warnings scripts/set-code.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0"
+  }
+}

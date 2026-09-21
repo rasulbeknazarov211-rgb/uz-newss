@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZ News — O'zbekiston Yangiliklari</title>
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    // Apply saved theme / language before first paint (prevents a light flash in dark mode)
+    (function () {
+      try {
+        var th = localStorage.getItem('uznews_theme');
+        if (!th) th = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', th);
+        var lg = localStorage.getItem('uznews_lang');
+        if (lg === 'ru' || lg === 'uz') document.documentElement.lang = lg;
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m && th === 'dark') m.setAttribute('content', '#0b1220');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Ad Banner -->
+  <div class="ad-banner">
+    <div class="ad-inner">
+      <div class="weather" id="weather"></div>
+      <div class="ad-content">
+        <span data-i18n="tagline">UZ News — O'zbekistonning eng tezkor yangiliklari</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page-change progress bar -->
+  <div class="page-progress" id="pageProgress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <button class="menu-btn" id="menuBtn" data-i18n-aria="menu" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="#/" class="logo">
+        <span class="logo-uz">UZ</span>
+        <span class="logo-news">NEWS</span>
+      </a>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Til / Язык" data-active="uz">
+          <button type="button" data-lang="uz" class="active" aria-pressed="true">UZ</button>
+          <button type="button" data-lang="ru" aria-pressed="false">RU</button>
+        </div>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Theme">
+          <i class="fas fa-moon icon-moon"></i>
+          <i class="fas fa-sun icon-sun"></i>
+        </button>
+        <button class="search-btn" id="searchBtn" data-i18n-aria="search" aria-label="Qidiruv">
+          <i class="fas fa-search"></i>
+        </button>
+        <a href="admin/index.html" class="admin-link" data-i18n-title="admin" title="Admin Panel">
+          <i class="fas fa-user-shield"></i>
+        </a>
+      </div>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="#" class="nav-link active" data-category="all" data-i18n="nav.all">Bosh sahifa</a>
+      <a href="#" class="nav-link" data-category="siyosat" data-i18n="cat.siyosat">Siyosat</a>
+      <a href="#" class="nav-link" data-category="iqtisod" data-i18n="cat.iqtisod">Iqtisod</a>
+      <a href="#" class="nav-link" data-category="sport" data-i18n="cat.sport">Sport</a>
+      <a href="#" class="nav-link" data-category="texnologiya" data-i18n="cat.texnologiya">Texnologiya</a>
+      <a href="#" class="nav-link" data-category="madaniyat" data-i18n="cat.madaniyat">Madaniyat</a>
+      <a href="#" class="nav-link" data-category="dunyo" data-i18n="cat.dunyo">Dunyo</a>
+      <a href="#" class="nav-link" data-category="jamiyat" data-i18n="cat.jamiyat">Jamiyat</a>
+      <a href="#/ai" class="nav-link nav-ai" data-category="ai"><i class="fas fa-robot"></i> <span data-i18n="nav.ai">AI yordamchi</span></a>
+    </nav>
+  </header>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-box">
+      <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Yangiliklarni qidiring...">
+      <button id="closeSearch"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span class="logo"><span class="logo-uz">UZ</span><span class="logo-news">NEWS</span></span>
+      <button id="closeMenu"><i class="fas fa-times"></i></button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#" class="nav-link active" data-category="all" data-i18n="nav.all">Bosh sahifa</a>
+      <a href="#" class="nav-link" data-category="siyosat" data-i18n="cat.siyosat">Siyosat</a>
+      <a href="#" class="nav-link" data-category="iqtisod" data-i18n="cat.iqtisod">Iqtisod</a>
+      <a href="#" class="nav-link" data-category="sport" data-i18n="cat.sport">Sport</a>
+      <a href="#" class="nav-link" data-category="texnologiya" data-i18n="cat.texnologiya">Texnologiya</a>
+      <a href="#" class="nav-link" data-category="madaniyat" data-i18n="cat.madaniyat">Madaniyat</a>
+      <a href="#" class="nav-link" data-category="dunyo" data-i18n="cat.dunyo">Dunyo</a>
+      <a href="#" class="nav-link" data-category="jamiyat" data-i18n="cat.jamiyat">Jamiyat</a>
+      <a href="#/ai" class="nav-link nav-ai" data-category="ai"><i class="fas fa-robot"></i> <span data-i18n="nav.ai">AI yordamchi</span></a>
+    </nav>
+    <a href="admin/index.html" class="mobile-admin"><i class="fas fa-user-shield"></i> <span data-i18n="admin">Admin panel</span></a>
+  </div>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <div class="page-view" id="pageView">
+  <!-- Hero Section -->
+  <section class="hero" id="heroSection">
+    <!-- Filled by JS -->
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Section heading (home) / category banner (category page) -->
+      <div id="gridHeader"></div>
+
+      <!-- Featured Grid -->
+      <div class="news-grid" id="newsGrid">
+        <!-- Filled by JS -->
+      </div>
+
+      <!-- AI Assistant — its own page (#/ai), hidden everywhere else -->
+      <section class="ai-section" id="aiSection" hidden>
+        <div class="ai-card">
+          <div class="ai-header">
+            <div class="ai-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div>
+              <h2 data-i18n="aiTitle">AI Yangilik Yordamchisi</h2>
+              <p data-i18n="aiSub">Yangiliklarni o'qing, tahlil qiling yoki savol bering</p>
+            </div>
+          </div>
+          <div class="ai-chat" id="aiChat">
+            <div class="ai-message bot" id="aiWelcome">
+              <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+              <div class="msg-content" data-i18n="aiHello">
+                Assalomu alaykum! Men UZ News AI yordamchisiman. Sizga yangiliklar haqida savol berishingiz, qisqacha xulosa so'rashingiz yoki ma'lumotlarni tahlil qilishingiz mumkin.
+              </div>
+            </div>
+          </div>
+          <div class="ai-input-area">
+            <input type="text" id="aiInput" data-i18n-placeholder="aiPlaceholder" placeholder="Masalan: Bugungi asosiy yangiliklar nima? yoki Siyosat bo'yicha xulosa...">
+            <button id="aiSend"><i class="fas fa-paper-plane"></i></button>
+          </div>
+          <div class="ai-suggestions">
+            <button class="suggestion-btn" data-i18n="aiSug1" data-qkey="aiSug1q">Bugungi asosiy yangiliklar</button>
+            <button class="suggestion-btn" data-i18n="aiSug2" data-qkey="aiSug2q">Siyosat xulosasi</button>
+            <button class="suggestion-btn" data-i18n="aiSug3" data-qkey="aiSug3q">Sport yangiliklari</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="categories-section" id="categoriesSection">
+        <h2 class="section-title" data-i18n="sections">Bo'limlar</h2>
+        <div class="categories-grid" id="categoriesGrid">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo footer-logo">
+            <span class="logo-uz">UZ</span>
+            <span class="logo-news">NEWS</span>
+          </div>
+          <p data-i18n="footerAbout">O'zbekiston va dunyo yangiliklarining ishonchli manbai. Tezkor, aniq va xolis axborot.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footerSections">Bo'limlar</h4>
+          <a href="#/siyosat" data-i18n="cat.siyosat">Siyosat</a>
+          <a href="#/iqtisod" data-i18n="cat.iqtisod">Iqtisod</a>
+          <a href="#/sport" data-i18n="cat.sport">Sport</a>
+          <a href="#/texnologiya" data-i18n="cat.texnologiya">Texnologiya</a>
+          <a href="#/ai" data-i18n="nav.ai">AI yordamchi</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footerCompany">Kompaniya</h4>
+          <a href="#" data-i18n="about">Biz haqimizda</a>
+          <a href="#" data-i18n="contact">Aloqa</a>
+          <a href="#" data-i18n="ads">Reklama</a>
+          <a href="#" data-i18n="privacy">Maxfiylik</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footerSocial">Ijtimoiy tarmoqlar</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="rights">&copy; 2026 UZ News. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Article Modal -->
+  <div class="modal" id="articleModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

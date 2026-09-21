@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — UZ News</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body is-checking">
+  <!-- Login: the admin panel opens only with the secret code -->
+  <div class="login-screen" id="loginScreen">
+    <form class="login-card" id="loginForm" autocomplete="off">
+      <div class="login-logo logo">
+        <span class="logo-uz">UZ</span>
+        <span class="logo-news">NEWS</span>
+      </div>
+      <h1>Admin panel</h1>
+      <p>Kirish uchun admin kodini kiriting</p>
+      <div class="login-field">
+        <i class="fas fa-key"></i>
+        <input type="password" id="loginCode" placeholder="Admin kodi" required autocomplete="current-password" maxlength="64">
+      </div>
+      <div class="login-error" id="loginError" role="alert"></div>
+      <button type="submit" class="btn-primary login-btn" id="loginBtn">
+        <i class="fas fa-right-to-bracket"></i> Kirish
+      </button>
+      <a href="../index.html" class="login-back"><i class="fas fa-arrow-left"></i> Saytga qaytish</a>
+    </form>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="../index.html" class="logo">
+        <span class="logo-uz">UZ</span>
+        <span class="logo-news">NEWS</span>
+      </a>
+      <span class="admin-badge">Admin</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="side-link active" data-tab="dashboard">
+        <i class="fas fa-chart-pie"></i> Dashboard
+      </a>
+      <a href="#" class="side-link" data-tab="news">
+        <i class="fas fa-newspaper"></i> Yangiliklar
+      </a>
+      <a href="#" class="side-link" data-tab="add">
+        <i class="fas fa-plus-circle"></i> Yangilik qo'shish
+      </a>
+      <a href="#" class="side-link" data-tab="security">
+        <i class="fas fa-shield-halved"></i> Xavfsizlik
+      </a>
+      <a href="../index.html" class="side-link">
+        <i class="fas fa-external-link-alt"></i> Saytga o'tish
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <button id="logoutBtn" class="logout-btn" type="button">
+        <i class="fas fa-right-from-bracket"></i> Chiqish
+      </button>
+      <button id="resetData" class="reset-btn">
+        <i class="fas fa-trash-alt"></i> Ma'lumotlarni tozalash
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Admin Content -->
+  <main class="admin-main">
+    <header class="admin-header">
+      <button class="sidebar-toggle" id="sidebarToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <h1 id="pageTitle">Dashboard</h1>
+      <div class="admin-user">
+        <i class="fas fa-user-circle"></i>
+        <span>Administrator</span>
+        <button type="button" class="header-logout" id="headerLogout" title="Chiqish" aria-label="Chiqish">
+          <i class="fas fa-right-from-bracket"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dashboard Tab -->
+    <section class="tab-content active" id="tab-dashboard">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon blue"><i class="fas fa-newspaper"></i></div>
+          <div>
+            <h3 id="statTotal">0</h3>
+            <p>Jami yangiliklar</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green"><i class="fas fa-eye"></i></div>
+          <div>
+            <h3 id="statViews">0</h3>
+            <p>Jami ko'rishlar</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon purple"><i class="fas fa-folder"></i></div>
+          <div>
+            <h3 id="statCats">0</h3>
+            <p>Bo'limlar</p>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon orange"><i class="fas fa-clock"></i></div>
+          <div>
+            <h3 id="statToday">0</h3>
+            <p>Bugungi yangiliklar</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div class="dash-card">
+          <h3>Bo'limlar bo'yicha</h3>
+          <div id="catStats"></div>
+        </div>
+        <div class="dash-card">
+          <h3>So'nggi yangiliklar</h3>
+          <div id="recentNews"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News List Tab -->
+    <section class="tab-content" id="tab-news">
+      <div class="toolbar">
+        <div class="search-admin">
+          <i class="fas fa-search"></i>
+          <input type="text" id="adminSearch" placeholder="Yangiliklarni qidirish...">
+        </div>
+        <select id="filterCategory">
+          <option value="all">Barcha bo'limlar</option>
+        </select>
+        <button class="btn-primary" id="goToAdd">
+          <i class="fas fa-plus"></i> Yangi
+        </button>
+      </div>
+      <div class="table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Sarlavha</th>
+              <th>Bo'lim</th>
+              <th>Sana</th>
+              <th>Ko'rishlar</th>
+              <th>Amallar</th>
+            </tr>
+          </thead>
+          <tbody id="newsTableBody">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Add/Edit Tab -->
+    <section class="tab-content" id="tab-add">
+      <form class="news-form" id="newsForm">
+        <input type="hidden" id="editId">
+        <div class="form-group">
+          <label for="title">Sarlavha *</label>
+          <input type="text" id="title" required placeholder="Yangilik sarlavhasi">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="category">Bo'lim *</label>
+            <select id="category" required>
+              <option value="">Tanlang...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="author">Muallif</label>
+            <input type="text" id="author" placeholder="Muallif ismi" value="Admin">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="excerpt">Qisqa matn *</label>
+          <textarea id="excerpt" rows="2" required placeholder="Qisqa tavsif (excerpt)"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="content">To'liq matn *</label>
+          <textarea id="content" rows="8" required placeholder="Yangilikning to'liq matni..."></textarea>
+        </div>
+        <details class="ru-fields" id="ruFields">
+          <summary><i class="fas fa-language"></i> Ruscha tarjima (ixtiyoriy)</summary>
+          <p class="hint">Bo'sh qoldirilgan maydonlar sayt ruscha rejimda ham o'zbekcha ko'rsatiladi.</p>
+          <div class="form-group">
+            <label for="titleRu">Заголовок</label>
+            <input type="text" id="titleRu" placeholder="Заголовок новости">
+          </div>
+          <div class="form-group">
+            <label for="excerptRu">Краткое описание</label>
+            <textarea id="excerptRu" rows="2" placeholder="Краткое описание"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="contentRu">Полный текст</label>
+            <textarea id="contentRu" rows="6" placeholder="Полный текст новости..."></textarea>
+          </div>
+        </details>
+        <div class="form-group">
+          <label for="image">Rasm URL</label>
+          <input type="url" id="image" placeholder="https://example.com/image.jpg">
+          <small>Bo'sh qoldirilsa, default rasm ishlatiladi</small>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="submitBtn">
+            <i class="fas fa-save"></i> Saqlash
+          </button>
+          <button type="button" class="btn-secondary" id="cancelEdit">Bekor qilish</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Security Tab -->
+    <section class="tab-content" id="tab-security">
+      <form class="news-form security-form" id="codeForm" autocomplete="off">
+        <h3><i class="fas fa-key"></i> Admin kodini o'zgartirish</h3>
+        <p class="hint">Kod almashtirilgach, barcha qurilmalardagi sessiyalar yopiladi (siz bundan mustasno).</p>
+        <div class="form-group">
+          <label for="codeCurrent">Joriy kod</label>
+          <input type="password" id="codeCurrent" required autocomplete="current-password" maxlength="64">
+        </div>
+        <div class="form-group">
+          <label for="codeNew">Yangi kod (kamida 6 belgi)</label>
+          <input type="password" id="codeNew" required minlength="6" maxlength="64" autocomplete="new-password">
+        </div>
+        <div class="form-group">
+          <label for="codeNew2">Yangi kodni takrorlang</label>
+          <input type="password" id="codeNew2" required minlength="6" maxlength="64" autocomplete="new-password">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Kodni yangilash</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="../js/data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

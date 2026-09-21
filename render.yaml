@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: uz-news
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: TRUST_PROXY
+        value: "1"
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: SUPABASE_URL
+        value: https://npnxstvggydpdvczuxry.supabase.co
+      - key: SUPABASE_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: ADMIN_CODE
+        sync: false
